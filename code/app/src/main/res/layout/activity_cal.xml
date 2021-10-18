@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:calendarview="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".CalActivity"
+    android:fitsSystemWindows="true"
+    tools:ignore="RtlHardcoded,HardcodedText,RtlSymmetry,SmallSp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/lightblue"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/white"
+            android:layout_above="@id/calview"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+
+    <com.othershe.calendarview.weiget.WeekView
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_marginTop="20dp"
+        fab:week_size="17"
+        calendarview:week_color="@color/purple"/>
+        <ImageView
+            android:layout_width="370dp"
+            android:layout_height="10dp"
+            android:layout_gravity="center"
+            android:background="@drawable/fgx" />
+
+    <com.othershe.calendarview.weiget.CalendarView
+        android:id="@+id/calview"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        calendarview:choose_type="single"
+        calendarview:show_holiday="true"
+        calendarview:show_lunar="true"
+        calendarview:show_term="true"
+        calendarview:choose_color="@color/colorAccent"
+        calendarview:switch_choose="true"
+        calendarview:solar_size="25"
+        calendarview:lunar_size="12"
+        fab:lunar_color="@color/grey"
+        fab:holiday_color="@color/yellow"
+        calendarview:day_bg="@drawable/zx"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/choose_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp" />
+
+    </LinearLayout>
+
+    <!--悬浮按钮样式，提供相关新建日程和日程列表查看两种选择-->
+    <com.getbase.floatingactionbutton.FloatingActionsMenu
+        android:id="@+id/alarm_nav"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="20dp"
+        fab:fab_addButtonColorNormal="@color/white"
+        fab:fab_addButtonColorPressed="@color/orange"
+        fab:fab_addButtonPlusIconColor="@color/yellow"
+        fab:fab_expandDirection="up"
+        fab:fab_labelStyle="@style/menu_labels_style">
+
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fbtn_alarm_all"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            fab:fab_colorNormal="@color/white"
+            fab:fab_colorPressed="@color/orange"
+            fab:fab_icon="@drawable/ic_baseline_playlist_add_check_24"/>
+
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fbtn_today"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            fab:fab_colorNormal="@color/white"
+            fab:fab_colorPressed="@color/orange"
+            fab:fab_icon="@drawable/ic_baseline_today_24"/>
+
+    </com.getbase.floatingactionbutton.FloatingActionsMenu>
+<!--    <com.getbase.floatingactionbutton.FloatingActionButton-->
+<!--        android:id="@+id/fbtn_today"-->
+<!--        android:layout_toLeftOf="@id/alarm_nav"-->
+<!--        android:layout_alignParentBottom="true"-->
+<!--        android:layout_marginBottom="20dp"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        fab:fab_colorNormal="@color/white"-->
+<!--        fab:fab_colorPressed="@color/orange"-->
+<!--        fab:fab_icon="@drawable/ic_baseline_today_24"/>-->
+
+</RelativeLayout>

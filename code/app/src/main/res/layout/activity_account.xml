@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Account.AccountActivity">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/account_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/bjblue"
+        fab:title="@string/account">
+
+        <SearchView
+            android:id="@+id/account_sv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <ListView
+        android:id="@+id/account_lv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/account_toolbar"
+        android:divider="@null"
+        android:dividerHeight="6dp"
+        android:padding="10dp"
+        android:scrollbars="vertical" />
+
+    <!--悬浮按钮样式，提供新建账目和跳转到便签查看两种选择-->
+    <com.getbase.floatingactionbutton.FloatingActionsMenu
+        android:id="@+id/rec_account_nav"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="20dp"
+        fab:fab_addButtonColorNormal="@color/white"
+        fab:fab_addButtonColorPressed="@color/orange"
+        fab:fab_addButtonPlusIconColor="@color/yellow"
+        fab:fab_expandDirection="up"
+        fab:fab_labelStyle="@style/menu_labels_style">
+
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fbtn_to_Note"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            fab:fab_colorNormal="@color/white"
+            fab:fab_colorPressed="@color/orange"
+            fab:fab_icon="@drawable/ic_baseline_assignment_24" />
+
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fbtn_account_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            fab:fab_colorNormal="@color/white"
+            fab:fab_colorPressed="@color/orange"
+            fab:fab_icon="@drawable/ic_baseline_add_24" />
+
+    </com.getbase.floatingactionbutton.FloatingActionsMenu>
+
+</RelativeLayout>

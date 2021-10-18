@@ -1,0 +1,3 @@
+include ':calendarview'
+include ':app'
+rootProject.name = "MultiCal"

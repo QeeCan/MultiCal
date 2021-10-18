@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".Schedule.ScheduleActivity">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/alarm_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/lyellow"
+        app:title="@string/alarm">
+
+        <SearchView
+            android:id="@+id/alarm_sv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <ListView
+        android:id="@+id/alarm_lv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/alarm_toolbar"
+        android:padding="10dp"
+        android:divider="@null"
+        android:dividerHeight="6dp"
+        android:scrollbars="vertical"
+      />
+
+
+    <com.getbase.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fbtn_alarm_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="20dp"
+        fab:fab_colorNormal="@color/white"
+        fab:fab_colorPressed="@color/orange"
+        fab:fab_icon="@drawable/ic_baseline_add_24" />
+
+
+</RelativeLayout>

@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">MultiCal</string>
+    <string name="hint_title_et">标题</string>
+    <string name="hint_content_et">请输入内容</string>
+    <string name="tag">Tag:</string>
+    <string name="life">生活</string>
+    <string name="study">学习</string>
+    <string name="work">工作</string>
+    <string name="fun">娱乐</string>
+    <string name="birthday">生日</string>
+    <string name="personal">个人</string>
+    <string name="date">Set Date</string>
+    <string name="time">Set Time</string>
+    <string name="account">记账</string>
+    <string name="note">便签</string>
+    <string name="alarm">日程</string>
+    <string name="cons">星座</string>
+    <string name="yuan">元</string>
+    <string name="remark">备注</string>
+    <string name="luck">星座运势</string>
+</resources>
